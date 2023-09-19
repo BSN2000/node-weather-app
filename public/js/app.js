@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit',(e)=>{
 
     const location = searchLocation.value
 
-    fetch('http://localhost:8000/weather?address='+encodeURIComponent(location)).then((response)=>{
+    fetch('/weather?address='+encodeURIComponent(location)).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             messgaeOne.textContent = data.error
